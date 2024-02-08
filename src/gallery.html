@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="banner">
+                <img src="assets/images/banner/gallery.jpg" alt="Crystal" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-right">
+            <div class="breadcumb">
+				<span><i class="fa fa-home" aria-hidden="true"></i> <a onclick="load('home.html');">Home</a></span>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Gallery
+            </div>
+        </div>
+    </div>
+</div>
+<section id="gallery">
+    <div class="container">
+        <div id="image-gallery">
+            <div class="row">
+                {{images-gallery}}
+            </div><!-- End row -->
+        </div><!-- End image gallery -->
+    </div><!-- End container -->
+</section>
+<script src="assets/js/lightbox.js"></script>

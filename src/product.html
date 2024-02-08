@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="banner">
+        <img src="assets/images/banner/product.jpg" alt="Brass Crystal" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 text-right">
+      <div class="breadcumb"><span><i class="fa fa-home" aria-hidden="true"></i> <a
+            onclick="load('home.html');">Home</a></span>
+        <i class="fa fa-angle-right" aria-hidden="true"></i><a onclick="load('products.html');">Product</a>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>{{name}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="inr-product-block product-img mortise-handle">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h1 class="heading">{{name}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 col-sm-12 col-xs-12">
+        <div class="c-product-image-viewer">
+          <div class="c-product-image-viewer__carousel">
+            <div class="o-slider-image-viewer">
+              <ul class="o-slider-image-viewer__inner js-sliderImageViewer">
+                {{images-showcase}}
+              </ul>
+              <div class="o-slider-image-viewer__nav js-imageViewerNav">
+                {{images-select}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aveilble-finish pt-3 pb-3">
+          <div class="ave-txt">
+            <p class="d-inline-block">Available Finish</p>
+            <div class="box-clr d-inline-block">
+              {{available-colors}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-12 col-xs-12 product-description">
+        <div class="row">
+          <h1 class="sub-heading">Description</h1>
+          <p>{{description}}</p>
+        </div>
+        <div class="row">
+          <a class="round-blue-btn"
+            onclick="localStorage.setItem('productName', '{{product-name}}'); load('contact.html');"><i
+              class="fa fa-phone"></i> &nbsp;Enquire Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="product-tbl">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Size in MM</th>
+                <th>Size in Inches</th>
+                <th>Box Packing</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{specifications}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/tiny-slider.js"></script>
+<script>
+  var slider = tns({
+    arrowKeys: true,
+    container: ".js-sliderImageViewer",
+    controls: false,
+    loop: false,
+    mouseDrag: true,
+    navContainer: ".js-imageViewerNav",
+  });
+</script>
